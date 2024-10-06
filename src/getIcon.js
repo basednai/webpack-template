@@ -1,7 +1,5 @@
-export async function getIcon(icon) {
-    let url = "https://github.com/visualcrossing/WeatherIcons/blob/main/SVG/1st%20Set%20-%20Color/" + `${icon}.svg`
-    const response = await fetch(url)
+const image = document.querySelector("#iconImage")
 
-    console.log(response.json);
-
+export function getIcon(iconName) {
+    image.src = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/refs/heads/main/SVG/4th%20Set%20-%20Color/${iconName}.svg`
 }

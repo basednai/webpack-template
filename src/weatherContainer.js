@@ -1,6 +1,7 @@
 import { getIcon } from "./getIcon";
 
 const weatherBox = document.querySelector(".weatherContainer");
+const addy = weatherBox.querySelector("#addy");
 const time = weatherBox.querySelector("#time");
 const icon = weatherBox.querySelector("#icon");
 const currentTemp = weatherBox.querySelector("#currentTemp");
@@ -11,12 +12,12 @@ const precipitation = weatherBox.querySelector("#precipitation");
 
 export function weatherContainer(response) {
   time.textContent = tConvert(response.currentConditions.datetime);
-  icon.textContent = response.currentConditions.icon;
+  addy.textContent = response.resolvedAddress;
   currentTemp.textContent = response.currentConditions.temp;
   feelsLike.textContent = response.currentConditions.feelslike;
   conditions.textContent = response.currentConditions.conditions;
   wind.textContent = response.currentConditions.windspeed;
-    precipitation.textContent = response.currentConditions.precipprob;
+    precipitation.textContent = response.currentConditions.precipprob  + "%";
 
     getIcon(response.currentConditions.icon)
 }

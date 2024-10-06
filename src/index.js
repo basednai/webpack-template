@@ -2,10 +2,6 @@ import "./styles.css";
 import "./getWeather";
 import "./weatherContainer";
 
-
-
-
-
 // Promise Implementation
 // if (!localStorage.getItem("weather")) {
 //   fetch(url, {

@@ -1,10 +1,11 @@
 import { locationString } from "./getLocation";
+import { locationInput } from "./getLocation";
 import { weatherContainer } from "./weatherContainer";
 
 const apiKey = "Q24UZSARHJ28JJ9B73ZM8UTLW";
 
+export let weather;
 export async function getWeather() {
-  let weather;
 
   if (!localStorage.getItem("weather")) {
     // use local storage to reduce api calls
@@ -18,7 +19,7 @@ export async function getWeather() {
 
       localStorage.setItem("weather", JSON.stringify(responseData));
       weather = responseData;
-      console.log(responseData);
+      console.log("api hit", responseData);
     } catch (error) {
       console.error(error);
     }
@@ -27,6 +28,7 @@ export async function getWeather() {
     console.log("memory hit", weather);
   }
   weatherContainer(weather);
+  locationInput.value = weather.resolvedAddress;
 }
 
 getWeather();

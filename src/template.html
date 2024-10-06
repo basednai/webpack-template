@@ -7,21 +7,43 @@
   </head>
   <body>
     <div class="container">
-        <div class="weatherContainer">
-            <div id="time"></div>
-            <div id="icon"></div>
-            <div id="currentTemp"></div>
-            <div id="feelsLike"></div>
-            <div id="conditions"></div>
-            <div id="wind"></div>
-            <div id="precipitation"></div>
-
+      <div class="formContainer">
+        <form id="locationForm" onsubmit="return false">
+          <label for="location">Enter Location:</label>
+          <input type="text" id="location" />
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+      <div class="weatherContainer">
+        <div class="metrics" id="locationMetric">
+          <div class="label"></div>
+          <div id="addy"></div>
+          <div id="time"></div>
         </div>
-      <form id="locationForm" onsubmit="return false">
-        <label for="location">Enter Location:</label>
-        <input type="text" id="location" />
-        <input type="submit" value="submit" />
-      </form>
+        <div class="metrics" id="iconMetric">
+          <div class="label"></div>
+          <div id="icon">
+            <img src="#" alt="" id="iconImage" />
+          </div>
+          <div id="conditions"></div>
+        </div>
+        <div class="metrics" id="tempMetric">
+          <div class="label">current temperature&ensp;</div>
+          <div id="currentTemp"></div>
+        </div>
+        <div class="metrics" id="feelsLikeMetric">
+          <div class="label">feels like&ensp;</div>
+          <div id="feelsLike"></div>
+        </div>
+        <div class="metrics" id="windMetric">
+          <div class="label">wind speed&ensp;</div>
+          <div id="wind"></div>
+        </div>
+        <div class="metrics" id="precipitationMetric">
+          <div class="label">chance of rain&ensp;</div>
+          <div id="precipitation"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

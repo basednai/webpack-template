@@ -1,5 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  box-sizing: border-box;
+}
+font-face {
+  font-family: "Roboto";
+}
+
 body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: "Roboto";
+}
+
+#location {
+    width: 40%;
+
+}
+
+#locationForm {
+width: 100%;
+text-align: center;
+
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 2fr 15fr;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.weatherContainer {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: 1fr */
+}
+
+.weatherContainer > * {
+  font-weight: bolder;
+  font-size: 3rem;
+  display: flex;
+}
+
+#locationMetric,
+#iconMetric {
+  display: block;
+}
+
+img {
+  width: 100%;
+}
+
+.metrics > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: 1rem;
+}
+
+#locationMetric {
+  grid-column: 1 / -1;
+  margin-bottom: 3rem;
+}
+
+#iconMetric {
+  grid-row: 2 / 6;
+}
+
+#tempMetric,
+#feelsLikeMetric,
+#windMetric,
+#precipitationMetric {
+  grid-column: 2 / -1;
 }
