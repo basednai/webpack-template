@@ -13,10 +13,10 @@ const precipitation = weatherBox.querySelector("#precipitation");
 export function weatherContainer(response) {
   time.textContent = tConvert(response.currentConditions.datetime);
   addy.textContent = response.resolvedAddress;
-  currentTemp.textContent = response.currentConditions.temp;
-  feelsLike.textContent = response.currentConditions.feelslike;
+  currentTemp.textContent = response.currentConditions.temp + "°";
+  feelsLike.textContent = response.currentConditions.feelslike + "°";
   conditions.textContent = response.currentConditions.conditions;
-  wind.textContent = response.currentConditions.windspeed;
+  wind.textContent = response.currentConditions.windspeed + " mph";
     precipitation.textContent = response.currentConditions.precipprob  + "%";
 
     getIcon(response.currentConditions.icon)
