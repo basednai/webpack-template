@@ -8,9 +8,9 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   },
-  "name": "weather-app",
+  "name": "webpack-template",
   "version": "1.0.0",
-  "main": "script.js",
+  "main": "/src/index.js",
   "dependencies": {
     "acorn": "^8.12.1",
     "acorn-import-attributes": "^1.9.5",
