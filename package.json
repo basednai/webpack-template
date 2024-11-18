@@ -99,7 +99,7 @@
     "wildcard": "^2.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test":"node --experimental-vm-modules node_modules/jest/bin/jest.js --watch src/tests/*.test.js",
     "build": "webpack",
     "dev": "webpack serve",
     "deploy": "git subtree push --prefix dist origin gh-pages"
